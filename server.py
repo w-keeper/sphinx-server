@@ -57,7 +57,7 @@ if __name__ == '__main__':
     config_file = '.sphinx-server.yml'
     install_folder = '/opt/sphinx-server/'
     build_folder = os.path.realpath('_build/html')
-    source_folder = os.path.realpath('.')
+    source_folder = os.path.realpath(os.getenv('SOURCE_PATH', '.'))
     configuration = None
 
     with open(install_folder + config_file, 'r') as config_stream:
